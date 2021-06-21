@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-function Contactus() {
+function ContactUs() {
   return (
     <FormMain>
       <Head>
-        <Text>Envie-nos uma mensagem</Text>
+        <Text>Envie-nos uma mensagem!</Text>
       </Head>
       <Forms>
         <Input id="name" type="text" placeholder="Digite aqui seu nome..." />
@@ -46,7 +46,7 @@ export const Head = styled.div`
 
 export const Text = styled.h1`
   font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   color: #212529;
   margin: 0;
   padding: 0;
@@ -104,7 +104,6 @@ export const Button = styled.button`
   box-sizing: border-box;
   border-radius: 6px;
   color: #0b5ed6;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 
   :hover {
@@ -114,4 +113,4 @@ export const Button = styled.button`
   }
 `;
 
-export default Contactus;
+export default ContactUs;
