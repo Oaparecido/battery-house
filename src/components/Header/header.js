@@ -21,6 +21,11 @@ export const Headers = styled.div`
   margin: 1em auto;
   border-bottom: 2px solid #dedede;
   padding: 0.5em 0em;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -34,6 +39,12 @@ export const Block = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 10vw;
+
+  @media (max-width: 800px) {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const About = styled.a`
@@ -46,6 +57,10 @@ export const About = styled.a`
     text-decoration: none;
     color: #212529;
   }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Button = styled.button`
@@ -57,5 +72,9 @@ export const Button = styled.button`
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-size: 16px;
+
+  @media (max-width: 800px) {
+    width: 10em;
+  }
 `;
 export default Header;

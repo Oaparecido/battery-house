@@ -26,10 +26,15 @@ export const FormMain = styled.div`
   flex-direction: column;
   align-items: center;
   width: 25rem;
-  margin: auto;
   border: 1px solid #dfdfdf;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(33, 37, 41, 0.1);
+
+  @media (max-width: 800px) {
+    width: auto;
+    padding: 1em;
+  }
 `;
 
 export const Head = styled.div`
@@ -50,6 +55,11 @@ export const Text = styled.h1`
   color: #212529;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+    padding: 1.3em;
+  }
 `;
 
 export const Forms = styled.form`
