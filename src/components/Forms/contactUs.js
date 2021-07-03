@@ -1,13 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
+import emailkey from "../../services/emailkey";
+import { init } from 'emailjs-com';
+init("user_OMlc59RhKoVNZOjjBAfu1");
 
 function Contactus() {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const target = {
+            "name": e.target.name.value,
+            "email": e.target.email.value
+        };
+
+        emailjs.send(`service_7igtymp`, emailkey.TEMPLATE_ID, target)
+            .then((result) => {
+                alert("Sua mensagem foi enviada!");
+            }, (error) => {
+                alert("Não conseguimos enviar sua mensagem, entre em contato mais tarde!");
+            })
+    };
+
   return (
     <FormMain>
       <Head>
         <Text>Envie-nos uma mensagem</Text>
       </Head>
-      <Forms>
+      <Forms onSubmit={handleSubmit}>
         <Input id="name" type="text" placeholder="Digite aqui seu nome..." />
         <Input
           id="email"
@@ -15,7 +36,7 @@ function Contactus() {
           placeholder="Digite aqui seu e-mail..."
         />
         <Message id="message" placeholder="Digite aqui sua mensagem..." />
-        <Button type="button">Enviar e-mail</Button>
+        <Button type="submit">Enviar e-mail</Button>
       </Forms>
     </FormMain>
   );
