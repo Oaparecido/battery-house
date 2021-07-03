@@ -12,7 +12,8 @@ function Contactus() {
 
         const target = {
             "name": e.target.name.value,
-            "email": e.target.email.value
+            "email": e.target.email.value,
+            "message": e.target.message.value,
         };
 
         emailjs.send(`service_7igtymp`, emailkey.TEMPLATE_ID, target)
