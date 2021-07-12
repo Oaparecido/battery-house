@@ -1,4 +1,5 @@
 import React from "react";
+import ReactWhatsapp from "react-whatsapp";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 
@@ -8,7 +9,9 @@ function Header() {
       <Title>Casa das baterias</Title>
       <Block>
         <About href="#">Sobre</About>
-        <Button type="button">Contato</Button>
+        <ReactWhatsapp element="button" number="5511947198386" message="Hello world!">
+          Contato
+        </ReactWhatsapp>
       </Block>
     </Headers>
   );
@@ -21,6 +24,21 @@ export const Headers = styled.div`
   margin: 1em auto;
   border-bottom: 2px solid #dedede;
   padding: 0.5em 0em;
+
+  button {
+    padding: 0.4em 1.5em;
+    background: #0b5ed6;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+
+    @media (max-width: 800px) {
+      width: 10em;
+    }
+  }
 
   @media (max-width: 800px) {
     flex-wrap: wrap;
@@ -63,18 +81,4 @@ export const About = styled.a`
   }
 `;
 
-export const Button = styled.button`
-  padding: 0.4em 1.5em;
-  background: #0b5ed6;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  font-size: 16px;
-
-  @media (max-width: 800px) {
-    width: 10em;
-  }
-`;
 export default Header;

@@ -7,22 +7,22 @@ init("user_OMlc59RhKoVNZOjjBAfu1");
 
 function Contactus() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        const target = {
-            "name": e.target.name.value,
-            "email": e.target.email.value,
-            "message": e.target.message.value,
-        };
-
-        emailjs.send(`service_7igtymp`, emailkey.TEMPLATE_ID, target)
-            .then((result) => {
-                alert("Sua mensagem foi enviada!");
-            }, (error) => {
-                alert("Não conseguimos enviar sua mensagem, entre em contato mais tarde!");
-            })
+    const target = { 
+      "name": e.target.name.value,
+      "email": e.target.email.value,
+      "message": e.target.message.value,
     };
+
+    emailjs.send(`service_7igtymp`, emailkey.TEMPLATE_ID, target)
+      .then((result) => {
+        alert("Sua mensagem foi enviada!");
+      }, (error) => {
+        alert("Não conseguimos enviar sua mensagem, entre em contato mais tarde!");
+      })
+  };
 
   return (
     <FormMain>
