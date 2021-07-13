@@ -101,7 +101,7 @@ export const ContainerCard = styled.div`
   @media (max-width: 800px) {
     flex-wrap: wrap;
     margin: 5em auto;
-    height: 70em;
+    height: auto;
     align-content: space-around;
   }
 `;
