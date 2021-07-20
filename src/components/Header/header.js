@@ -9,9 +9,13 @@ function Header() {
       <Title>Casa das baterias</Title>
       <Block>
         <About href="#">Sobre</About>
-        <ReactWhatsapp element="button" number="5511947198386" message="Hello world!">
+        <ReactWhatsappCustom
+          element="button"
+          number="551146420571"
+          message="Olá, encontrei seu catálogo online, vim saber sobre as baterias, podemos conversar ?!"
+        >
           Contato
-        </ReactWhatsapp>
+        </ReactWhatsappCustom>
       </Block>
     </Headers>
   );
@@ -26,18 +30,6 @@ export const Headers = styled.div`
   padding: 0.5em 0em;
 
   button {
-    padding: 0.4em 1.5em;
-    background: #0b5ed6;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-
-    @media (max-width: 800px) {
-      width: 10em;
-    }
   }
 
   @media (max-width: 800px) {
@@ -81,4 +73,18 @@ export const About = styled.a`
   }
 `;
 
+export const ReactWhatsappCustom = styled(ReactWhatsapp)`
+  padding: 0.4em 1.5em;
+  background: #0b5ed6;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+
+  @media (max-width: 800px) {
+    width: 10em;
+  }
+`;
 export default Header;

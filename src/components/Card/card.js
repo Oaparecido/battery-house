@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import ReactWhatsapp from "react-whatsapp";
 
 function Card(props) {
-
   return (
     <CardMain>
       <FirstBox>
-        <ImgBattery src={props.img}/>
+        <ImgBattery src={props.img} />
         <Text>
           <Model>{props.model}</Model>
           <p>Modelo</p>
@@ -17,9 +17,13 @@ function Card(props) {
           <Dolla>$</Dolla>
           <p>{props.price}</p>
         </Price>
-        <Button>
+        <ReactWhatsappCustom
+          element="button"
+          number="551146420571"
+          message={`Gostei muito da bateria ${props.model}, podemos conversar sobre ?!`}
+        >
           Pedir Agora
-        </Button>
+        </ReactWhatsappCustom>
       </Secondbox>
     </CardMain>
   );
@@ -53,7 +57,7 @@ export const Text = styled.div`
   align-items: flex-end;
 
   p {
-    color: #6C757D;
+    color: #6c757d;
     font-size: 20px;
   }
 `;
@@ -70,7 +74,7 @@ export const ImgBattery = styled.img`
   height: 4em;
 `;
 
-export const Secondbox = styled.div` 
+export const Secondbox = styled.div`
   display: flex;
   justify-content: space-between;
   width: inherit;
@@ -103,7 +107,7 @@ export const Dolla = styled.h2`
   padding-top: 15px;
 `;
 
-export const Button = styled.button`
+export const ReactWhatsappCustom = styled(ReactWhatsapp)`
   width: 7em;
   height: 3em;
   border: none;
